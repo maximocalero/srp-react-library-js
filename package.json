@@ -116,5 +116,10 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "chokidar": "^1.6.1",
+    "npm-run-all": "^4.0.2",
+    "react-docgen": "^2.14.0"
   }
 }
