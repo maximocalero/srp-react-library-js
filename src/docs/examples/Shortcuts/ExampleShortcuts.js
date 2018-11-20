@@ -1,5 +1,5 @@
 import React from 'react';
-import Shortcuts from 'ps-react/Shortcuts';
+import Shortcuts from 'srp-react-library-js/Shortcuts';
 
 /** Custom message */
 export default function ExampleShortcuts() {

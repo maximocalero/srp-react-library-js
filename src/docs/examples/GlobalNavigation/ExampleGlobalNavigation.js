@@ -1,5 +1,5 @@
 import React from 'react';
-import GlobalNavigation from 'ps-react/GlobalNavigation';
+import GlobalNavigation from 'srp-react-library-js/GlobalNavigation';
 
 /** Custom message */
 export default function ExampleHelloWorld() {

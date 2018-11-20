@@ -34,7 +34,7 @@
             {
                 "name": "ExampleGlobalNavigation",
                 "description": "Custom message",
-                "code": "import React from 'react';\r\nimport GlobalNavigation from 'ps-react/GlobalNavigation';\r\n\r\n/** Custom message */\r\nexport default function ExampleHelloWorld() {\r\n    const globalNavigationItems = {\r\n            \"globalNavigationItems\": [\r\n                {\r\n                    \"name\": \"News\",\r\n                    \"url\": \"https://sirpointdevs.sharepoint.com/sites/news\",\r\n                    \"description\": \"Corporate Company News Portal\",\r\n                    \"target\": \"\"\r\n                },\r\n                {\r\n                    \"name\": \"Human Resources\",\r\n                    \"url\": \"https://sirpointdevs.sharepoint.com/sites/hr\",\r\n                    \"description\": \"Human Resources Portal\",\r\n                    \"target\": \"\"\r\n                },\r\n                {\r\n                    \"name\": \"Learning\",\r\n                    \"url\": \"https://sirpointdevs.sharepoint.com/sites/learning\",\r\n                    \"description\": \"Learning Portal\",\r\n                    \"target\": \"\"\r\n                }\r\n            ]            \r\n    }\r\n\r\n    return <GlobalNavigation title=\"Global Navigation Example\" currentUrl =\"#\" globalNavigationItems = {globalNavigationItems} />\r\n}"
+                "code": "import React from 'react';\r\nimport GlobalNavigation from 'srp-react-library-js/GlobalNavigation';\r\n\r\n/** Custom message */\r\nexport default function ExampleHelloWorld() {\r\n    const globalNavigationItems = {\r\n            \"globalNavigationItems\": [\r\n                {\r\n                    \"name\": \"News\",\r\n                    \"url\": \"https://sirpointdevs.sharepoint.com/sites/news\",\r\n                    \"description\": \"Corporate Company News Portal\",\r\n                    \"target\": \"\"\r\n                },\r\n                {\r\n                    \"name\": \"Human Resources\",\r\n                    \"url\": \"https://sirpointdevs.sharepoint.com/sites/hr\",\r\n                    \"description\": \"Human Resources Portal\",\r\n                    \"target\": \"\"\r\n                },\r\n                {\r\n                    \"name\": \"Learning\",\r\n                    \"url\": \"https://sirpointdevs.sharepoint.com/sites/learning\",\r\n                    \"description\": \"Learning Portal\",\r\n                    \"target\": \"\"\r\n                }\r\n            ]            \r\n    }\r\n\r\n    return <GlobalNavigation title=\"Global Navigation Example\" currentUrl =\"#\" globalNavigationItems = {globalNavigationItems} />\r\n}"
             }
         ]
     },
@@ -59,7 +59,7 @@
             {
                 "name": "ExampleHelloWorld",
                 "description": "Custom message",
-                "code": "import React from 'react';\r\nimport HelloWorld from 'ps-react/HelloWorld';\r\n\r\n/** Custom message */\r\nexport default function ExampleHelloWorld() {\r\n  return <HelloWorld message=\"Pluralsight viewers!\" />\r\n}"
+                "code": "import React from 'react';\r\nimport HelloWorld from 'srp-react-library-js/HelloWorld';\r\n\r\n/** Custom message */\r\nexport default function ExampleHelloWorld() {\r\n  return <HelloWorld message=\"Pluralsight viewers!\" />\r\n}"
             }
         ]
     },
@@ -87,7 +87,7 @@
             {
                 "name": "ExampleTestComponent",
                 "description": "Custom message",
-                "code": "import React from 'react';\r\nimport TestComponent from 'ps-react/TestComponent';\r\n\r\n/** Custom message */\r\nexport default function ExampleTestComponent() {\r\n  return <TestComponent title=\"test!\" content =\"test\" />\r\n}"
+                "code": "import React from 'react';\r\nimport TestComponent from 'srp-react-library-js/TestComponent';\r\n\r\n/** Custom message */\r\nexport default function ExampleTestComponent() {\r\n  return <TestComponent title=\"test!\" content =\"test\" />\r\n}"
             }
         ]
     }
