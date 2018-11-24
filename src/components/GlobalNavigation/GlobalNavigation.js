@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './globalNavigation.module.css';
 // import styled from 'styled-components';
 
-import NavigationItem from '../../componentsProps/ItemNavigation';
+import NavigationItem from 'srp-react-library-js-props';
 
 const GlobalNavigation = ({title, currentUrl, globalNavigationItems}) => {
     return (
