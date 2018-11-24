@@ -1,7 +1,22 @@
 {
   "name": "srp-react-library-js",
   "version": "0.1.0",
-  "private": true,
+  "main": "./lib/index.js",
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "author": {
+    "name": "Maximo Calero Sanchez",
+    "email": "maximo.calero@outlook.com",
+    "url": "https://maximocalero.github.io/srp-react-library-js"
+  },
+  "files": [ "lib" ],
+  "keywords": [
+    "react",
+    "components",
+    "react-component",
+    "sharepoint framework"
+  ],
   "dependencies": {
     "@babel/core": "7.1.0",
     "@svgr/webpack": "2.4.1",
@@ -10,7 +25,6 @@
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.4",
     "babel-plugin-named-asset-import": "^0.2.3",
-    "babel-preset-react-app": "^6.1.0",
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
     "chalk": "2.4.1",
@@ -66,7 +80,11 @@
     "build:docs": "node scripts/build.js",
     "test": "node scripts/test.js",
     "predeploy:docs": "npm run build:docs",
-    "deploy:docs": "gh-pages -d build"
+    "deploy:docs": "gh-pages -d build",
+    "prebuild:lib": "rimraf lib",
+    "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore spec.js",
+    "build:css": "cpx \"./src/components/**/*.css\" ./lib",
+    "build:lib": "npm run build:commonjs && npm run build:css"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -120,13 +138,24 @@
   },
   "babel": {
     "presets": [
+      [
+        "env",
+        {
+          "modules": "commonjs"
+        }
+      ],
       "react-app"
     ]
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-react-app": "^3.0.0",
     "chokidar": "^1.6.1",
+    "cpx": "^1.5.0",
+    "cross-env": "^4.0.0",
     "gh-pages": "^0.12.0",
     "npm-run-all": "^4.0.2",
-    "react-docgen": "^2.14.0"
+    "react-docgen": "^2.14.0",
+    "rimraf": "^2.6.1"
   }
 }

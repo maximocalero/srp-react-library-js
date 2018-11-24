@@ -1,0 +1,32 @@
+
+.center{
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.toolBarContainer{
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 40px;
+    font-size: 1.15em;    
+}
+
+.toolBarItem{
+    display: inline-block;
+    padding-left: 7px;
+}
+
+.toolBarItem a{
+    font-size: 1.5em;
+    cursor: pointer;
+}
