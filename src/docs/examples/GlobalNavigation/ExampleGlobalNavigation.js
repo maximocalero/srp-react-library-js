@@ -1,8 +1,8 @@
 import React from 'react';
 import GlobalNavigation from 'srp-react-library-js/GlobalNavigation';
 
-/** Custom message */
-export default function ExampleHelloWorld() {
+/** Example of a menu bar Global Navigation */
+export default function ExampleGlobalNavigation() {
     const globalNavigationItems = 
     [
         {

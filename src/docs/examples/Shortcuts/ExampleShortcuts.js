@@ -1,7 +1,7 @@
 import React from 'react';
 import Shortcuts from 'srp-react-library-js/Shortcuts';
 
-/** Custom message */
+/** Example of toolbar with three sites */
 export default function ExampleShortcuts() {
     const shorCuts = 
     [

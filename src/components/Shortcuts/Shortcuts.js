@@ -5,7 +5,7 @@ import { Icon } from 'office-ui-fabric-react/lib/Icon';
 import { initializeIcons } from '@uifabric/icons';
 initializeIcons();
 
-/** Component to show shortcuts with an icon */
+/** Toolbar with shorcuts to navigate to most used sites */
 function Shortcuts ({alignment, shortcutItems}) {
     const containerAlign = () => {
         if (alignment === "center"){

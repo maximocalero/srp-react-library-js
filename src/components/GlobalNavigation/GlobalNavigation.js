@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './globalNavigation.module.css';
-// import styled from 'styled-components';
 
-import NavigationItem from '../../componentsProps/ItemNavigation';
-
+/** Component to show a menu bar */
 const GlobalNavigation = ({title, currentUrl, globalNavigationItems}) => {
     return (
         <div className={styles.divContainer}>
