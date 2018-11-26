@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "styled-components": "^1.4.5"
@@ -17,7 +19,11 @@
     "build:docs": "node scripts/build.js",
     "test": "node scripts/test.js",
     "predeploy:docs": "npm run build:docs",
-    "deploy:docs": "gh-pages -d build"
+    "deploy:docs": "gh-pages -d build",
+    "prebuild:lib": "rimraf lib",
+    "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore spec.js",
+    "build:css": "cpx \"./src/components/**/*.css\" ./lib",
+    "build:lib": "npm run build:commonjs && npm run build:css"    
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -71,6 +77,12 @@
   },
   "babel": {
     "presets": [
+      [
+        "@babel/env",
+        {
+          "modules": "commonjs"
+        }
+      ],
       "react-app"
     ]
   },
