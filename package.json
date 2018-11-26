@@ -1,10 +1,26 @@
 {
   "name": "srp-react-library-js",
-  "version": "0.1.0",
+  "version": "0.1.2",
+  "main": "./lib/index.js",
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "author": {
+    "name": "Maximo Calero Sanchez",
+    "email": "maximo.calero@outlook.com",
+    "url": "https://maximocalero.github.io/srp-react-library-js"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "react",
+    "components",
+    "react-component",
+    "sharepoint framework"
+  ],
   "private": true,
   "dependencies": {
-    "@babel/cli": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "styled-components": "^1.4.5"
@@ -23,7 +39,8 @@
     "prebuild:lib": "rimraf lib",
     "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore spec.js",
     "build:css": "cpx \"./src/components/**/*.css\" ./lib",
-    "build:lib": "npm run build:commonjs && npm run build:css"    
+    "build:lib": "npm run build:commonjs && npm run build:css",
+    "prepublish": "npm run build:lib"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -87,7 +104,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.1.0",
     "@babel/core": "7.1.0",
+    "@babel/preset-env": "^7.1.0",
     "@svgr/webpack": "2.4.1",
     "babel-cli": "^6.26.0",
     "babel-core": "7.0.0-bridge.0",
