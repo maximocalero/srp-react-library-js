@@ -21,7 +21,6 @@
   ],
   "private": false,
   "dependencies": {
-    "@babel/runtime": "^7.1.5",
     "office-ui-fabric-react": "^6.106.3",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
@@ -97,12 +96,18 @@
   "babel": {
     "presets": [
       [
-        "@babel/env",
+        "@babel/preset-env",
         {
           "modules": "commonjs"
         }
       ],
-      [ "react-app", { "absoluteRuntime": false } ]
+      [
+        "react-app",
+        {
+          "helpers": false,
+          "absoluteRuntime": false
+        }
+      ]
     ]
   },
   "devDependencies": {
