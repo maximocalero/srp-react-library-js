@@ -10,6 +10,7 @@
 
 # production
 /build
+/lib
 
 # misc
 .DS_Store
@@ -24,3 +25,4 @@ yarn-error.log*
 
 # component data
 /config/componentData.js
+config/componentData.js
