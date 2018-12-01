@@ -18,5 +18,5 @@ export const ToolBarItem = styled.li`
 
 export const ToolBarItemLink = styled.a`
     font-size: 1.5em;
-    cursor: pointer;        
+    cursor: pointer;
 `

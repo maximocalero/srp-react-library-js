@@ -13,6 +13,11 @@ function Shortcuts ({alignment, shortcutItems}) {
            text-align: ${alignment};
         }
     `
+
+    const IconWithColor = styled(Icon)`
+        color: rgb(0, 120, 215);
+    `
+
     return (
         <div>
             <ToolBarContainer>
@@ -20,7 +25,7 @@ function Shortcuts ({alignment, shortcutItems}) {
                     return(                
                         <ToolBarItem key = {key}>
                             <ToolBarItemLink href={shortcutItems[key].url} target= {shortcutItems[key].target}>
-                                <Icon iconName = {shortcutItems[key].iconName} className = {shortcutItems[key].className} title = {shortcutItems[key].name}/>
+                                <IconWithColor iconName = {shortcutItems[key].iconName} className = {shortcutItems[key].className} title = {shortcutItems[key].name}/>
                             </ToolBarItemLink>
                         </ToolBarItem>   
                     );
