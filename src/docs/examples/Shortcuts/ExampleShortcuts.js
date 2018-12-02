@@ -26,8 +26,8 @@ export default function ExampleShortcuts() {
             "url": "https://outlook.office.com/owa/?realm=sirpoint.com&exsvurl=1&ll-cc=1033&modurl=0&path=/people",
             "description": "All Users Directory",
             "target": "",
-            "iconName": "CompanyDirectory",
-            "className" : "ms-Icon ms-Icon--CompanyDirectory"
+            "iconName": "People",
+            "className" : "ms-Icon ms-Icon--People"
         }
     ] 
     
