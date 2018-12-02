@@ -7,7 +7,7 @@ import {NavigationMainContainer,
         NavigationItem, 
         NavigationItemLink } from './GlobalNavigationComponents';
 
-/** Component to show a menu bar */
+/** Menu bar component */
 const GlobalNavigation = ({title, currentUrl, globalNavigationItems}) => {
     return (
         <NavigationMainContainer>
@@ -36,13 +36,13 @@ const GlobalNavigation = ({title, currentUrl, globalNavigationItems}) => {
 }
 
 GlobalNavigation.propTypes = {
-    /** Title of Global Navigation */
+    /** Title of menu component */
     title: PropTypes.string,
 
-    /** Current Url Global Navigation */
+    /** Current Url used in menu */
     currentUrl: PropTypes.string,
     
-    /** Global Navigation Items*/
+    /** Menu Items*/
     globalNavigationItems: PropTypes.array
 }
 

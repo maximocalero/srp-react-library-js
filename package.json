@@ -1,6 +1,6 @@
 {
   "name": "srp-react-library-js",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "main": "./lib/index.js",
   "engines": {
     "node": ">=8.10.0"

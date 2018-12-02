@@ -2,9 +2,7 @@ import React from 'react';
 import SearchBoxSuggestions from 'srp-react-library-js/SearchBoxSuggestions';
 import PropTypes from "prop-types";
 
-// Import the Autocomplete Component
-// import Autocomplete from 'react-autocomplete';
-
+/** Example of a textbox suggestions using a static array */
 export default class ExampleSearchBoxSuggestions extends React.Component {
     static propTypes = {
         suggestions: PropTypes.instanceOf(Array),
@@ -16,23 +14,23 @@ export default class ExampleSearchBoxSuggestions extends React.Component {
     
       static defaultProps = {
         suggestions: [
-            "Alligator",
-            "Alligator1",
-            "Alligator2",
-            "Alligator3",
-            "Alligator4",
-            "Bask",
-            "Bask1",
-            "Bask2",
-            "Bask3",
-            "Crocodilian",
-            "Death Roll",
-            "Eggs",
-            "Jaws",
-            "Reptile",
-            "Solitary",
-            "Tail",
-            "Wetlands"
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Vue",
+            "Angular",
+            "Meteor",
+            "Ember",
+            "Backbone",
+            "Aurelia",
+            "Polimer",
+            "Mithril.js",
+            "JQuery",
+            "Lodash",
+            "Modernizr",
+            "Babel",
+            "Webpack",
+            "D3js",
         ]       
       };
     
@@ -55,7 +53,6 @@ export default class ExampleSearchBoxSuggestions extends React.Component {
         const { suggestions } = this.props;
         const userInput = e.currentTarget.value;
     
-        // Filter our suggestions that don't contain the user's input
         const filteredSuggestions = suggestions.filter(
           suggestion =>
             suggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1
@@ -107,9 +104,15 @@ export default class ExampleSearchBoxSuggestions extends React.Component {
         }
       };
 
+      
+
     render() {
+      const divStyle = {
+        "text-align": "center"
+      };
+
         return (
-            <div>
+            <div style = {divStyle}>
                 <SearchBoxSuggestions activeSuggestion = {this.state.activeSuggestion} 
                                       filteredSuggestions = {this.state.filteredSuggestions}
                                       showSuggestions = {this.state.showSuggestions}

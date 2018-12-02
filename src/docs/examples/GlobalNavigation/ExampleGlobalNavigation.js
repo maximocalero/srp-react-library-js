@@ -1,7 +1,7 @@
 import React from 'react';
 import GlobalNavigation from 'srp-react-library-js/GlobalNavigation';
 
-/** Example of a menu bar Global Navigation */
+/** Example of a menu bar with GlobalNavigation component */
 export default function ExampleGlobalNavigation() {
     const globalNavigationItems = 
     [
