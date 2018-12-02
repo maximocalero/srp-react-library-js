@@ -23,6 +23,7 @@
   "dependencies": {
     "office-ui-fabric-react": "^6.106.3",
     "react": "^16.6.0",
+    "react-autocomplete": "^1.8.1",
     "react-dom": "^16.6.0",
     "styled-components": "^1.4.5"
   },
