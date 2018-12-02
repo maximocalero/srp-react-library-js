@@ -1,37 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './shortcuts.module.css';
 import { Icon } from 'office-ui-fabric-react/lib/Icon';
+import styled from 'styled-components';
+import { BaseToolBarContainer, ToolBarItem, ToolBarItemLink } from './ShortcutsComponents';
 import { initializeIcons } from '@uifabric/icons';
 initializeIcons();
 
 /** Toolbar with shorcuts to navigate to most used sites */
 function Shortcuts ({alignment, shortcutItems}) {
-    const containerAlign = () => {
-        if (alignment === "center"){
-            return styles.center;
+    const ToolBarContainer = styled(BaseToolBarContainer)`
+        &&& {
+           text-align: ${alignment};
         }
-        if (alignment === "left"){
-            return styles.left;
-        }
-        if (alignment === "right"){
-            return styles.right;
-        }        
-    }
+    `
+
+    const IconWithColor = styled(Icon)`
+        color: rgb(0, 120, 215);
+    `
 
     return (
         <div>
-            <ul className= {`${styles.toolBarContainer} ${containerAlign()}`} >
+            <ToolBarContainer>
                 {Object.keys(shortcutItems).map(key=>{
                     return(                
-                        <li className={styles.toolBarItem} key = {key}>
-                            <a className={styles.navigationItem} href={shortcutItems[key].url} target= {shortcutItems[key].target}>
-                                <Icon iconName = {shortcutItems[key].iconName} className = {shortcutItems[key].className} title = {shortcutItems[key].name}/>
-                            </a>
-                        </li>   
+                        <ToolBarItem key = {key}>
+                            <ToolBarItemLink href={shortcutItems[key].url} target= {shortcutItems[key].target}>
+                                <IconWithColor iconName = {shortcutItems[key].iconName} className = {shortcutItems[key].className} title = {shortcutItems[key].name}/>
+                            </ToolBarItemLink>
+                        </ToolBarItem>   
                     );
                 })}
-            </ul>        
+            </ToolBarContainer>        
         </div>
     );
 }
