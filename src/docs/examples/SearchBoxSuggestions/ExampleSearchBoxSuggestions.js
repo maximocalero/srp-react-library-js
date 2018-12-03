@@ -107,12 +107,15 @@ export default class ExampleSearchBoxSuggestions extends React.Component {
       
 
     render() {
-      const divStyle = {
-        "text-align": "center"
-      };
+      // const divStyle = {
+      //   "z-index": "1000",
+      //   "margin": "auto",
+      //   "width": "50%",      
+      // };
+      //style = {divStyle}
 
         return (
-            <div style = {divStyle}>
+            <div>
                 <SearchBoxSuggestions activeSuggestion = {this.state.activeSuggestion} 
                                       filteredSuggestions = {this.state.filteredSuggestions}
                                       showSuggestions = {this.state.showSuggestions}

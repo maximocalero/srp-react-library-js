@@ -7,15 +7,15 @@ export const TextBox = styled.input`
 `
 
 export const Suggestions = styled.ul`
-    display: inline-block;
+    position: absolute;
     border: 1px solid #999;
     border-top-width: 0;
     list-style: none;
     margin-top: 0;
-    max-height: 143px;
     overflow-y: auto;
     padding-left: 0;
     width: calc(300px + 1rem);
+    background: white;
 
     :hover {
         background-color: #0467fc;;
@@ -29,8 +29,7 @@ export const Suggestions = styled.ul`
     }
 `
 export const Suggestion = styled.li`
-display: inline-block;
-padding: 0.5rem;
+    padding: 0.5rem;
 `
 
 export const ActiveSuggestion = styled.li`
@@ -43,4 +42,9 @@ export const ActiveSuggestion = styled.li`
 export const NoSuggestions = styled.div`
     color: #999;
     padding: 0.5rem;
+`
+
+export const SuggestionsContainer = styled.div`
+    margin: auto;
+    width: 50%;
 `

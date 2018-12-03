@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from 'prop-types';
-import { TextBox, Suggestions, Suggestion, ActiveSuggestion, NoSuggestions } from './SearchBoxSuggestionsComponents';
+import { TextBox, Suggestions, Suggestion, ActiveSuggestion, NoSuggestions, SuggestionsContainer } from './SearchBoxSuggestionsComponents';
 
 /** Autocomplete textbox */
 const SearchBoxSuggestions = ({activeSuggestion, filteredSuggestions, showSuggestions, userInput, onChange, onClick, onKeyDown }) => {
@@ -40,7 +40,7 @@ const SearchBoxSuggestions = ({activeSuggestion, filteredSuggestions, showSugges
 
     return (
         <Fragment>
-            <div>
+            <SuggestionsContainer>
                 <TextBox
                     type="text"
                     onChange={onChange}
@@ -48,7 +48,7 @@ const SearchBoxSuggestions = ({activeSuggestion, filteredSuggestions, showSugges
                     value={userInput}
                 />
                 {suggestionsListComponent}
-            </div>
+            </SuggestionsContainer>
         </Fragment>
     );
 
